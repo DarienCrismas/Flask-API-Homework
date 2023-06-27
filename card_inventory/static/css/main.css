@@ -1,0 +1,132 @@
+*{
+    /*border: 1px solid red; */
+    margin: 0;
+}
+
+/* Nav Styles */
+
+.ct-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Main Logo Image */
+.ct-nav img{
+    width: 10%;
+    max-width: 90%;
+    margin-left: 2vw;
+    margin-top: 2vh;
+}
+
+#horizontal-list{
+    min-width: 785px;
+    list-style: none;
+    padding-top: 20px;
+}
+
+#horizontal-list li, #horizontal-list a{
+    display: inline;
+    text-decoration: none;
+    padding: .5vw;
+    color: black;
+}
+
+#horizontal-list a:nth-last-child(1){
+    border: 2px solid red;
+    background-color: red;
+    border-radius: 10px;
+    margin-right: .2vw;
+}
+
+/* End Nav Styles */
+
+/* Hero Section */
+
+.button{
+    background-color: red;
+    color: white;
+    border: 2px solid red;
+    border-radius: 10px;
+    padding: .5vw;
+    margin: .2vw;
+}
+
+#header-text{
+    padding: 2vw;
+}
+
+.header-image{
+    width: 82%;
+    max-width: 100%;
+}
+
+/* End of Hero Section */
+
+/* Middle Section Styles */
+
+.row img{
+    width: 3vw;
+}
+
+#middle-text{
+    text-align: center;
+    padding: 13vh; 
+}
+
+#middle-text h2{
+    padding: 1.5vw; 
+}
+
+/* End of Middle Section */
+
+/* Feature Section Styles */
+img{
+    margin-bottom: 2vh; 
+    
+}
+
+#features-section{
+    margin: 8vw; 
+    text-align: center;
+}
+
+/* End of Features Section */
+
+/* Community Section Styles */
+
+#mew-image{
+    width: 26%;
+    max-width: 75%;
+    margin-left: 20vw; 
+}
+
+/* End of Community Section */
+
+/* Footer Section Styles */
+
+.footer-text-flex{
+    display: flex;
+    flex-direction: column; 
+    margin-top: 4vw; 
+}
+
+
+#footer-logo{
+    width: 60%;
+    max-width: 100%;
+    margin: 2vw; 
+}
+
+#footer{
+    align-content: left;
+    border-top: 3px solid black;
+    margin-top: 20vh; 
+    background-color: grey;
+    position: relative;
+    padding-top: 5vh;
+    bottom: 0px;
+    width: 100vw;
+    left: -5.5vw;
+}
+
+/* End Footer Section */
