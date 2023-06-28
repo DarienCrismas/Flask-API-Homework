@@ -1,0 +1,28 @@
+*{
+    /*border: 1px solid red; */
+    margin: 0;
+}
+
+/* Details */
+
+#profile-header{
+    margin-top: 5vh;
+    margin-left: 3vw;
+    border-bottom: 3px solid red;
+    box-shadow: 0px 3px black;
+    width: fit-content;
+}
+
+/* End Details */
+
+/* Image */
+
+#profile-img{
+    margin-top: 5vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+
+/* End Image */

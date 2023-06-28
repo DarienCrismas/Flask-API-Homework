@@ -1,0 +1,7 @@
+- Split off index-specific CSS into subpage for personal organization
+- Sign specific CSS
+- Profile specific CSS
+- Button links (onlick JS)
+- Make error messages uniform
+
+- Figure out how I would do a deck if they don't cover it tmrw

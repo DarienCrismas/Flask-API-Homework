@@ -8,15 +8,14 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="../static/css/main.css">
-<title>Pokemon Card Collection API</title>
+<link rel="stylesheet" href="../static/css/sign.css">
+<link rel="stylesheet" href="../static/css/profile.css">
+<title>Pokemon Card Collection</title>
 </head>
 <body>
 
-    <!--Nav Bar Here-->
-    <nav class="ct-nav">
-        <div>
-            <img src="../static/images/red_back.png" alt="red battle sprite">
-        </div>
+    <!--Nav-->
+    <nav class="navigation">
 
         <div>
             <ul id="horizontal-list">
@@ -26,23 +25,26 @@
                 <a href="{{ url_for('site.home') }}">
                     <li>Home</li>
                 </a>
-                <a href="#">
-                    <li>Profile</li>
-                </a>
-                <a href="#">
-                    <li>Log Out</li>
-                </a>
+                {% if current_user.is_authenticated %}
+                    <a href="{{ url_for('site.profile') }}">
+                        <li>Profile</li>
+                    </a>
+                    <a href="{{ url_for('auth.logout') }}">
+                        <li>Log Out</li>
+                    </a>
+                {% else %}
                 <a href="{{ url_for('auth.signin') }}">
                     <li>Sign In</li>
                 </a>
                 <a href="{{ url_for('auth.signup') }}">
                     <li style="color: white" >Sign Up Free</li>
                 </a>
+                {% endif %}
             </ul>
         </div>
     </nav>
 
-    <!--End Nav Bar-->
+    <!--End Nav-->
 
     {% block content %}
     {% endblock content %}

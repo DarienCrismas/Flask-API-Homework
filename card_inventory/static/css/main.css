@@ -1,21 +1,18 @@
 *{
-    /*border: 1px solid red; */
+    /* border: 1px solid yellowgreen; */
     margin: 0;
 }
 
-/* Nav Styles */
+/* Nav*/
 
-.ct-nav{
-    display: flex;
+.navigation{
     justify-content: space-between;
-}
-
-/* Main Logo Image */
-.ct-nav img{
-    width: 10%;
-    max-width: 90%;
-    margin-left: 2vw;
-    margin-top: 2vh;
+    position: relative; 
+    width: 100vw;
+    height: 10%;
+    text-align: center;
+    background-color: red;
+    border-bottom: 3px solid black;  
 }
 
 #horizontal-list{
@@ -28,25 +25,25 @@
     display: inline;
     text-decoration: none;
     padding: .5vw;
-    color: black;
+    color: white;
+    
 }
 
 #horizontal-list a:nth-last-child(1){
-    border: 2px solid red;
-    background-color: red;
-    border-radius: 10px;
-    margin-right: .2vw;
+    border: 3px solid black;
+    background-color: black;
+    border-radius: 4vw;
+    color: white;
 }
 
-/* End Nav Styles */
+/* End Nav */
 
-/* Hero Section */
-
+/* Header */
 .button{
     background-color: red;
     color: white;
-    border: 2px solid red;
-    border-radius: 10px;
+    border: 3px solid black;
+    border-radius: 4vw;
     padding: .5vw;
     margin: .2vw;
 }
@@ -60,9 +57,9 @@
     max-width: 100%;
 }
 
-/* End of Hero Section */
+/* End Header */
 
-/* Middle Section Styles */
+/* Middle */
 
 .row img{
     width: 3vw;
@@ -77,12 +74,11 @@
     padding: 1.5vw; 
 }
 
-/* End of Middle Section */
+/* End Middle */
 
-/* Feature Section Styles */
+/* Features */
 img{
     margin-bottom: 2vh; 
-    
 }
 
 #features-section{
@@ -90,9 +86,9 @@ img{
     text-align: center;
 }
 
-/* End of Features Section */
+/* End Features */
 
-/* Community Section Styles */
+/* Community  */
 
 #mew-image{
     width: 26%;
@@ -100,33 +96,27 @@ img{
     margin-left: 20vw; 
 }
 
-/* End of Community Section */
+/* End Community */
 
-/* Footer Section Styles */
+/* Footer */
 
-.footer-text-flex{
-    display: flex;
-    flex-direction: column; 
-    margin-top: 4vw; 
-}
-
-
-#footer-logo{
-    width: 60%;
-    max-width: 100%;
-    margin: 2vw; 
+#footer h4{
+    color: white;
 }
 
 #footer{
-    align-content: left;
-    border-top: 3px solid black;
+    align-content: center;
+    text-align: center;
+    border: 4px solid black;
     margin-top: 20vh; 
-    background-color: grey;
-    position: relative;
-    padding-top: 5vh;
+    background-color: red;
+    border-top-left-radius: 30% 80%;
+    border-top-right-radius: 30% 80%;
+    color: black;
+    padding-top: 10vh;
     bottom: 0px;
-    width: 100vw;
-    left: -5.5vw;
+    width: 100%;
+    left: -5vw;
 }
 
-/* End Footer Section */
+/* End Footer */
