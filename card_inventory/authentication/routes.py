@@ -36,7 +36,7 @@ def signin():
             password = userform.password.data
             print(email, password)
 
-            logged_user = User.query.filter(User.email == email).first()
+            logged_user = User.query.filter_by(email = email).first()
 
             if logged_user and check_password_hash(logged_user.password, password):
                 login_user(logged_user)
@@ -44,7 +44,7 @@ def signin():
                 return redirect(url_for("site.profile")) 
             else:
                 flash("Your email or password is incorrect", "auth-failed")
-                return redirect("auth.signin")
+                return redirect(url_for("auth.signin"))
     except:
         raise Exception("Invalid sign in data, please try again.")
     return render_template("signin.html", form=userform)
