@@ -8,7 +8,6 @@ api = Blueprint('api', __name__, url_prefix="/api")
 def getdata():
     return {"some": "value"}
 
-#come back and change this routing to something cuter and more thematic
 @api.route("/cards", methods = ["POST"])
 @token_required
 def add_card(our_user):
@@ -16,7 +15,7 @@ def add_card(our_user):
     edition = request.json["edition"]
     estimated_price = request.json["estimated_price"]
     condition = request.json["condition"]
-    pokemon_type = request.json["pokemon_typ"]
+    pokemon_type = request.json["pokemon_type"]
     promotional = request.json["promotional"]
     move_1 = request.json["move_1"]
     move_2 = request.json["move_2"]
@@ -52,6 +51,7 @@ def get_cards(our_user):
     cards = Card.query.filter_by(user_token = token).all()
     response = bank_schema.dump(cards)
     return jsonify(response)
+
 
 @api.route("/cards/<id>", methods = ["PUT"])
 @token_required

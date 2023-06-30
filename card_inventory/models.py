@@ -55,7 +55,7 @@ class Card(db.Model):
     estimated_price = db.Column(db.Numeric(precision=10, scale=2), nullable = True)
     condition = db.Column(db.String(150), nullable = True)
     type = db.Column(db.String(20))
-    promotional = db.Column(db.Boolean, default = False)
+    promotional = db.Column(db.String(20))
     move_1 = db.Column(db.String(150))
     move_2 = db.Column(db.String(150))
     hit_points = db.Column(db.Numeric(5))

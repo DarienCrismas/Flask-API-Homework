@@ -8,6 +8,7 @@ auth = Blueprint("auth", __name__, template_folder="auth_templates")
 @auth.route("/signup", methods=["GET", "POST"])
 def signup():
     userform = UserLoginForm()
+
     try:
         if request.method == "POST" and userform.validate_on_submit():
             username = userform.username.data
@@ -19,10 +20,10 @@ def signup():
             db.session.add(user)
             db.session.commit()
 
-            flash(f"You have successfully created a user account {username}.", "user-created")
+            flash(f"You have successfully created a user account, {username}.", "user-created")
             return redirect(url_for("auth.signin"))
     except:
-        raise Exception("Invalid form data. Please try again.")
+        raise Exception("Invalid sign up data. Please try again.")
     return render_template("signup.html", form=userform)
 
 @auth.route("/signin", methods = ["GET", "POST"])
@@ -45,7 +46,7 @@ def signin():
                 flash("Your email or password is incorrect", "auth-failed")
                 return redirect("auth.signin")
     except:
-        raise Exception("Invalid Form Data: please check your form")
+        raise Exception("Invalid sign in data, please try again.")
     return render_template("signin.html", form=userform)
 
 @auth.route("/logout")

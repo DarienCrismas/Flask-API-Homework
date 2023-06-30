@@ -14,10 +14,19 @@
     {% endif %}
 {% endwith %} 
 
+
 <header>
     <h3 class="header-text" id="profile-header">
         Welcome the Pokemon Center (no copyright infringement intended), {{ current_user.username }}!
     </h3>
+    <main class="container card_form">
+        <div class="row">
+            <aside class="col-12 col-md-6">
+                <h2>Add a Card!</h2>
+                {% include "cardform.html" %}
+            </aside>
+        </div>
+    </main>
 </header>
 
 <div class = "container">
@@ -27,10 +36,26 @@
         <li class = "list-group-item">Email: {{current_user.email}} </li>
         <li class = "list-group-item">Token: {{current_user.token}} </li>
     </ul>
+
+    <div class="row">
+        {% for card in cards %}
+        <div class="card text-center" style="width: 18rem;">
+            <img src="../../static/images/great_ball.png" class="card-img-top" alt="pixel great ball">
+            <div class="card-body">
+              <h5 class="card-title">{{ card.pokemon }}</h5>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">{{card.pokemon_type}}</li>
+              <li class="list-group-item">{{card.hit_points}}</li>
+              <li class="list-group-item">{{card.condition}}</li>
+              <li class="list-group-item">{{card.estimated_price}}</li>
+            </ul>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 
 <div>
     <img src="../../static/images/red_back.png" alt="pixel mew" id="profile-img">
 </div>
-
 {% endblock content %}

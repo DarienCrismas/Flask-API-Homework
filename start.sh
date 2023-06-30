@@ -1,0 +1,1 @@
+gunicorn "card_inventory:app"
